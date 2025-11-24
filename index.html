@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection - Team & Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --dark: #1e293b;
+            --bg: #f4f6f9;
+            --accent: #2ecc71; /* Green for Live Demo */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- PROJECT SECTION --- */
+        .project-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        h1 { color: var(--primary); text-align: center; margin-bottom: 10px; }
+        h2 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-top: 30px; font-size: 1.5rem; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.2rem; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        .methodology-list { margin-top: 15px; }
+        .methodology-list li { margin-bottom: 15px; }
+        .highlight { color: var(--primary); font-weight: bold; }
+
+        .methodology-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Project Links Section */
+        .project-links {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        .project-links h3 { margin-bottom: 20px; color: #444; }
+
+        /* --- TEAM SECTION --- */
+        .team-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .member-card {
+            background: white;
+            flex: 1;
+            min-width: 350px;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* LARGE PROFILE IMAGES */
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .member-name { font-size: 1.8rem; font-weight: bold; margin: 0; color: #333; }
+        .member-role { color: var(--primary); font-weight: 600; font-size: 1.1rem; margin-bottom: 20px; }
+
+        .info-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; font-weight: bold; }
+        .value { font-weight: 600; font-size: 0.95rem; }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 5px;
+            transition: transform 0.2s, opacity 0.2s;
+            font-weight: 600;
+        }
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .btn-github { background: #333; }
+        .btn-linkedin { background: #0077b5; }
+        .btn-live { background: var(--accent); } /* Special color for Live Demo */
+
+        .other-project {
+            width: 100%;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .contact-section {
+            margin-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid { flex-direction: column; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="project-card">
+            <h1>Diabetic Retinopathy Detection</h1>
+            <div class="subtitle">AI-Powered Screening using Deep Learning & Explainable AI</div>
+
+            <h2>Introduction</h2>
+            <p>
+                Diabetic Retinopathy (DR) is a progressive eye condition and a leading cause of blindness among adults globally. Early detection is critical for effective treatment; however, the manual diagnostic process requires highly trained ophthalmologists to examine retinal fundus images for minute signs like microaneurysms and hemorrhages. This manual process is time-consuming, expensive, and prone to human error, creating a bottleneck in healthcare delivery.
+            </p>
+            <p>
+                Our project addresses this challenge by developing an automated, AI-driven screening system. We leverage advanced Deep Learning architectures to classify retinal images into "Referable" (Severe) and "Non-Referable" (Normal/Mild) cases. By integrating Explainable AI (XAI), we go beyond simple prediction, providing clinicians with visual evidence of the model's decision-making process, thereby bridging the gap between "black box" AI and clinical trust.
+            </p>
+
+            <h2>Methodology</h2>
+            <p>We implemented a rigorous end-to-end pipeline designed for medical imaging reliability:</p>
+            
+            <ul class="methodology-list">
+                <li>
+                    <span class="highlight">1. Data Curation & Balancing:</span> 
+                    The raw dataset contained severe class imbalances. We curated a specialized binary dataset by mapping multi-class labels (0-4) to a binary schema (Normal vs. Severe). To prevent model bias, we utilized undersampling techniques to create a perfectly balanced dataset, ensuring the model learns to identify pathologies rather than just predicting the majority class.
+                </li>
+                <li>
+                    <span class="highlight">2. Advanced Preprocessing:</span> 
+                    Retinal images often suffer from poor lighting and low contrast. We implemented a preprocessing pipeline that includes standardizing image size to 224x224 pixels and applying <strong>CLAHE (Contrast Limited Adaptive Histogram Equalization)</strong>. This technique locally enhances contrast, making subtle features like blood vessels and lesions significantly more distinct for the neural networks.
+                </li>
+                <li>
+                    <span class="highlight">3. Parallel Model Architectures:</span> 
+                    We trained and evaluated three distinct state-of-the-art architectures to determine the optimal solution:
+                    <ul>
+                        <li><strong>ResNet-50:</strong> A deep Convolutional Neural Network (CNN) utilizing residual connections to capture complex feature hierarchies.</li>
+                        <li><strong>EfficientNet-B0:</strong> A highly efficient CNN that scales depth, width, and resolution uniformly, offering high accuracy with lower computational cost.</li>
+                        <li><strong>Vision Transformer (ViT-B/16):</strong> A non-convolutional architecture that treats image patches as sequences, allowing for global context understanding via self-attention mechanisms.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="highlight">4. Explainability & Deployment:</span> 
+                    To ensure transparency, we integrated <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>. This technique generates heatmaps overlaying the original image, highlighting the specific pixels (e.g., hemorrhages) that influenced the model's prediction. The final system was deployed as a responsive Flask web application on Hugging Face Spaces for real-time accessibility.
+                </li>
+            </ul>
+            
+            <img src="flowchart.jpg" alt="Project Architecture Flowchart" class="methodology-img">
+
+            <p style="text-align: center; font-size: 0.9rem; color: #666;">
+                <em>Figure 1: Complete pipeline illustrating the flow from data ingestion and preprocessing to model training and Grad-CAM visualization.</em>
+            </p>
+
+            <h2>Results & Conclusion</h2>
+            <p>
+                Our comprehensive evaluation demonstrated that deep learning models can effectively screen for severe Diabetic Retinopathy. <strong>EfficientNet-B0</strong> emerged as the most balanced model, delivering high accuracy and F1-scores suitable for clinical screening. Crucially, the Grad-CAM visualizations confirmed that our models were learning clinically relevant features—correctly focusing on lesions rather than background noise. This project validates the potential of AI to serve as a reliable, transparent second opinion for ophthalmologists.
+            </p>
+
+            <div class="project-links">
+                <h3>Project Resources</h3>
+                
+                <a href="https://huggingface.co/spaces/MohanKrishna27062001/Diabetic-Retinopathy-Detection" target="_blank" class="btn btn-live">
+                    <i class="fas fa-rocket"></i> Launch Live Web App
+                </a>
+
+                <a href="https://github.com/Tarun-Teja18/diabetic-retinopathy-screening" target="_blank" class="btn btn-github">
+                    <i class="fab fa-github"></i> View Source Code
+                </a>
+            </div>
+            </div>
+
+        <h1 style="margin-bottom: 30px;">Meet the Team</h1>
+        
+        <div class="team-grid">
+
+            <div class="member-card">
+                <img src="profile_mohan.jpeg" alt="Mohan Krishna" class="profile-img">
+                
+                <div class="member-name">Mohan Krishna Thiriveedhi</div>
+
+                <div class="info-grid">
+                    <div>
+                        <div class="label">Graduation</div>
+                        <div class="value">May 2026</div>
+                    </div>
+                    <div>
+                        <div class="label">Internship</div>
+                        <div class="value">Seeking Spring 2026/ Full Time</div>
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <div class="label">Dream Job</div>
+                        <div class="value">Software Developer</div>
+                    </div>
+                </div>
+
+                <div class="other-project">
+                    <div class="label" style="margin-bottom: 5px;">Other Project</div>
+                    <strong>Large-Scale Cybersecurity Threat Detection</strong><br>
+                    <span style="font-size: 0.9rem; color: #555;">Scalable intrusion detection using PySpark (98% acc).</span><br>
+                    <a href="https://github.com/MohanKrishna27062001/-Large-Scale-Cybersecurity-Threat-Detection" target="_blank" style="color: var(--primary); font-size: 0.9rem;">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="contact-section">
+                    <a href="https://www.linkedin.com/in/mohan-krishna-thiriveedhi-335255214" target="_blank" class="btn btn-linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:mohankrishnathiriveedhi27@gmail.com" class="btn btn-github">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="profile_tarun.jpeg" alt="Tarun Pokala" class="profile-img">
+                
+                <div class="member-name">Tarun Pokala</div>
+
+                <div class="info-grid">
+                    <div>
+                        <div class="label">Graduation</div>
+                        <div class="value">May 2026</div>
+                    </div>
+                    <div>
+                        <div class="label">Internship</div>
+                        <div class="value">Seeking Spring 2026/ Full Time</div>
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <div class="label">Dream Job</div>
+                        <div class="value">Software Developer</div>
+                    </div>
+                </div>
+
+                <div class="other-project">
+                    </div>
+
+                <div class="contact-section">
+                    <a href="https://www.linkedin.com/in/tarun-teja-pokala-2a5463190/" target="_blank" class="btn btn-linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:traun.pokala@gmail.com" class="btn btn-github">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer style="text-align: center; margin-top: 50px; color: #888; font-size: 0.9rem;">
+            Linked to KSU CCSE Program | © 2025 Diabetic Retinopathy Team
+        </footer>
+
+    </div>
+
+</body>
+</html>
